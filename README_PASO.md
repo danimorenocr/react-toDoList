@@ -23,9 +23,16 @@ code .
     - index.html -> renderiza el proyecto
 
 3. # src
-    - App.js
+    - App.js -> Estructura de los componentes
     - index.js
     - index.css
+    
+    # COMPONENTES
+    - ToDoCounter.js
+    - ToDoFilter.js
+    - ToDoItem.js
+    - ToDoList.js
+    - CreateToDoButton.js
 
 
 
