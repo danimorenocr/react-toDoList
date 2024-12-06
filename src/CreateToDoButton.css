@@ -1,0 +1,33 @@
+/* Contenedor general (opcional, para mayor control si es necesario) */
+.container {
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos al inicio */
+  align-items: center; /* Centra verticalmente */
+}
+
+/* Estilos para el botón redondo */
+.create-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Hacer el botón redondo */
+  background-color: #61dafa; /* Fondo azul */
+  color: white;
+  font-size: 70px; /* Tamaño del texto */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(97, 218, 250, 0.6); /* Efecto de neón */
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  margin-left: 500px; /* Desplazar el botón ligeramente hacia la derecha */
+}
+
+/* Efecto de neón más fuerte al pasar el mouse */
+.create-btn:hover {
+  box-shadow: 0 0 30px rgba(97, 218, 250, 1);
+  transform: scale(1.1); /* Aumentar tamaño del botón en hover */
+}
+

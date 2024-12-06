@@ -3,7 +3,6 @@ import { ToDoFilter } from "./ToDoFilter";
 import { ToDoList } from "./ToDoList";
 import { ToDoItem } from "./ToDoItem";
 import { CreateToDoButton } from "./CreateToDoButton";
-import "./App.css";
 import React from "react";
 
 // Crear un array de tareas el cual se van a invocar en el ToDoItem

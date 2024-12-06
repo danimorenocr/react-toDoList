@@ -1,11 +1,16 @@
+import "./ToDoFilter.css";
 function ToDoFilter() {
   return (
-    <input placeholder="Buscar tareas...">
-
-    </input>
+    <div className="input-container">
+      <input
+        type="text"
+        className="custom-input"
+        placeholder="Buscar tareas..."
+      />
+    </div>
   );
 }
 
-// EXPORTAR PARA Q RENDERICE 
-export { ToDoFilter }
+// EXPORTAR PARA Q RENDERICE
+export { ToDoFilter };
 // IMPORTAR EN APP.JS COMO OBJETO

@@ -1,0 +1,12 @@
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 48px;
+  color: #1e1e1f;
+  text-align: center;
+  font-weight: lighter;
+}
+
+span {
+  font-weight: bold;
+}
