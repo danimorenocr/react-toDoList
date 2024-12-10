@@ -5,13 +5,17 @@ function ToDoItem(props) {
       <span
         // Comillas invertidas para hacer los estilos dinamicos
         // Si la propiedad q viene del app es verdadera se activa el css
-        className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}>
+        className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
+        onClick={props.onCompleted}
+      >
         v
       </span>
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--completed"}`}>
         {props.text}
       </p>
-      <span className="Icon Icon-delete">X</span>
+      <span className="Icon Icon-delete" onClick={props.onDelete}>
+        X
+      </span>
     </li>
   );
 }

@@ -34,6 +34,30 @@ function App() {
     return tareaText.includes(searchValueText);
   });
 
+  //Marcar tarea como completada
+  const tareaCompletada = (text) => {
+    //Crear copia del array de tareas
+    const nuevasTareas = [...tareas];
+    //Encontrar el indice de la tarea q se va a completar
+    // eslint-disable-next-line eqeqeq
+    const indexTarea = nuevasTareas.findIndex((tarea) => tarea.text == text);
+    //Cambiar completado a true
+    nuevasTareas[indexTarea].completed = "true";
+    setTareas(nuevasTareas);
+  };
+
+  //Eliminar Tarea
+  const eliminarTarea = (text) => {
+    //Crear copia del array de tareas
+    const nuevasTareas = [...tareas];
+    //Encontrar el indice de la tarea q se va a completar
+    // eslint-disable-next-line eqeqeq
+    const indexTarea = nuevasTareas.findIndex((tarea) => tarea.text == text);
+    //Borrar del array la tarea
+    nuevasTareas.splice(indexTarea, 1);
+    setTareas(nuevasTareas);
+  };
+
   return (
     // El React.Fragment reemplaza el div del app y vuelve eso invisible ya que es necesario q todos los componenetes se
     // envuelvan en un solo fragmento o div
@@ -42,7 +66,10 @@ function App() {
       {/* ESTRUCUTURA DE COMPONENTES */}
       {/* pasar props  */}
 
-      <ToDoCounter completed={completedTareas} total={totalTareas} />
+      <ToDoCounter
+        completed={completedTareas}
+        total={totalTareas}
+      />
       <ToDoFilter
         // PASAR EL ESTADO COMO PROPIEDAD PARA Q FUNCIONE EN EL OTRO JS
         miPropiedadBuscar={searchValue}
@@ -58,6 +85,8 @@ function App() {
             key={tarea.text}
             text={tarea.text}
             completed={tarea.completed}
+            onCompleted={() => tareaCompletada(tarea.text)}
+            onDelete={() => eliminarTarea(tarea.text)}
           />
         ))}
       </ToDoList>
