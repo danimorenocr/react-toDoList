@@ -1,21 +1,18 @@
+import { CompletedIcon } from "./CompletedIcon.js";
+import { DeletedIcon } from "./DeleteIcon.js";
 import "./ToDoItem.css";
 function ToDoItem(props) {
   return (
     <li className="TodoItem">
-      <span
-        // Comillas invertidas para hacer los estilos dinamicos
-        // Si la propiedad q viene del app es verdadera se activa el css
-        className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
-        onClick={props.onCompleted}
-      >
-        v
-      </span>
+      <CompletedIcon
+        completed={props.completed}
+        onCompleted={props.onCompleted}
+      />
+
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--completed"}`}>
         {props.text}
       </p>
-      <span className="Icon Icon-delete" onClick={props.onDelete}>
-        X
-      </span>
+      <DeletedIcon onDelete={props.onDelete} />
     </li>
   );
 }
